@@ -1,4 +1,6 @@
-SEM FLEX
+* {
+  box-sizing: border-box;
+}
 /* HEADER */
 header {
   height: 10%;
@@ -9,6 +11,9 @@ header {
 nav {
   margin-top: 70px;
   background-color: #ffb90f;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 header nav img {
@@ -18,14 +23,16 @@ header nav img {
 }
 
 header nav ul {
-  display: inline-block;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
   list-style: none;
   margin-left: 160px;
   height: 60px;
 }
 
 header nav ul li {
-  display: inline-block;
   padding: 15px 0 0 50px;
   font-size: 20px;
   font-weight: bold;
@@ -37,8 +44,10 @@ nav ul li a {
 }
 
 .form {
-  display: inline-block;
-  margin-left: 400px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  /*margin-left: 400px;*/
 }
 
 /* CONTAINER */
@@ -48,9 +57,17 @@ nav ul li a {
   margin: 40px auto;
 }
 
+section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 section .product {
   height: 300px;
   width: 300px;
+  flex-basis: 1 1 auto;
   background-position: center;
   background-size: cover;
   background-color: #000000;
@@ -59,6 +76,10 @@ section .product {
   opacity: 1;
   /* Aplica uma transição mais suave */
   transition: opacity 0.8s ease-in-out;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: space-around;
 }
 
 section .product-image-1 {
@@ -68,32 +89,34 @@ section .product-image-1 {
 section .product-image-2 {
   background-image: url("../imagens/product-2.jpg");
 }
+
 section .product-image-3 {
   background-image: url("../imagens/product-3.jpg");
 }
 
 section .img-label {
   width: 70px;
-  position: absolute;
+  /*position: absolute;*/
   margin-left: 226px;
-  margin-top: 5px;
+  /*margin-top: 5px;*/
+  flex-basis: 0 0 auto;
 }
 
 section .name-product {
   color: white;
   font-size: 20px;
   text-align: center;
-  margin-top: 128px;
-  position: absolute;
+  margin: 30px auto;
+  /*position: absolute;*/
   background-color: #101010;
-  height: 35px;
+  /*height: 35px;*/
   width: 300px;
-  padding-top: 10px;
+  /*padding-top: 10px;*/
 }
 
-section .botao {
+section .view-more {
   background-color: #ff4500;
-  margin: 220px 0 0 100px;
+  margin: auto;
   color: white;
   width: 90px;
   height: 40px;
